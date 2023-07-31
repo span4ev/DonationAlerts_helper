@@ -1,0 +1,12 @@
+﻿<ul class="da-donationslist">
+    <li><span class="username">Аноним</span><span class="delimiter"> - </span><span class="amount">10 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Rosie from America</span><span class="delimiter"> - </span><span class="amount">15 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Аноним</span><span class="delimiter"> - </span><span class="amount">10 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Это я</span><span class="delimiter"> - </span><span class="amount">100 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Rosie from America</span><span class="delimiter"> - </span><span class="amount">15 <span class="currency">RUB</span></span></li>
+    <li><span class="username">НеПалатка</span><span class="delimiter"> - </span><span class="amount">20 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Rosie from America</span><span class="delimiter"> - </span><span class="amount">15 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Аноним</span><span class="delimiter"> - </span><span class="amount">10 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Rosie from America</span><span class="delimiter"> - </span><span class="amount">15 <span class="currency">RUB</span></span></li>
+    <li><span class="username">Аноним</span><span class="delimiter"> - </span><span class="amount">10 <span class="currency">RUB</span></span></li>
+</ul>
