@@ -1,4 +1,4 @@
-﻿import locale
+﻿import locale, math
 # Локаль для правильной сортировки русских букв
 locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
 
@@ -24,28 +24,34 @@ for i in lines:
 
 temp_dict = {}
 for i in temp_lst:
-    x, y = i[0], int(i[1])
+    x, y = i[0], i[1]
+
+    if ',' in y:
+        y = y.replace(',', '.')
+        y = float(y)
+        y = math.ceil(y)
+
+    if type(y) == str and ' ' in y:
+        y = y.replace(' ', '')
+
+    y = int(y)
+
     if not x in temp_dict:
         temp_dict[x] = y
     else:
         temp_dict[x] += y
 
-temp_lst = []
+temp_lst.clear()
 for i, k in temp_dict.items():   
     temp_lst.append((i, k))
-
 
 
 with open ('config.txt', 'r', encoding='utf-8') as f:
     config = f.readlines()
 
-
-# Настройка по умолчанию - сортировка по большему донату
-sorting = 2
-# Настройка по умолчанию - указание валюты после суммы отсутствует
-line_ending = ''
-# Настройка по умолчанию - указание общей суммы всех донатов
-total_sum = 1
+sorting     = 2  # Настройка по умолчанию - сортировка по большему донату
+line_ending = '' # Настройка по умолчанию - указание валюты после суммы отсутствует
+total_sum   = 1  # Настройка по умолчанию - указание общей суммы всех донатов
 
 for i in config:
     if 'sorting' in i:
@@ -63,7 +69,6 @@ for i in config:
             total_sum = int(x)
         else:
             total_sum = 1
-
 
 if sorting == 0:
     temp_lst = temp_lst
@@ -85,13 +90,8 @@ with open ('donations_result.txt', 'w', encoding='utf-8') as f:
     result_sum = 0
     for i in temp_lst:
         line = f'{i[0]} - {i[1]} {line_ending} \n'
-        result_sum += i[1]
+        result_sum += int(i[1])
         f.writelines(line)
     if total_sum:
         f.write(f'\nОбщая сумма - {result_sum} {line_ending}')
-
-
-
-
-
 
