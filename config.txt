@@ -1,3 +1,7 @@
-sorting = 2
-line_ending = 
+script_option = 2
+sorting = 3
+min_donation_sum = 0
+donations_lines_amount = 0
+line_ending = ₽
 total_sum = 0
+show_donation_date = 1
